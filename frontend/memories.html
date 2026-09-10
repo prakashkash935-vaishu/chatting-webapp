@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Our Memories ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="memories.css">
+</head>
+
+<body>
+
+    <div class="memories-page">
+
+        <!-- Header -->
+        <div class="memories-header">
+
+            <h1>📸 Our Beautiful Memories ❤️</h1>
+
+            <button onclick="window.location.href='dashboard.html'">
+                ← Back to Dashboard
+            </button>
+
+        </div>
+
+
+        <!-- Add Memory Form -->
+        <div class="memory-form">
+
+            <h2>💌 Add New Memory</h2>
+
+            <label>Memory Title</label>
+
+            <input type="text" id="title" placeholder="Example: Our First Meeting ❤️">
+
+
+            <label>Description</label>
+
+            <textarea id="description" placeholder="Write something about this beautiful memory..."></textarea>
+
+
+            <label>Choose Photo</label>
+
+            <input type="file" id="photo" accept="image/*">
+
+
+            <button onclick="uploadMemory()">
+                ❤️ Add Memory
+            </button>
+
+            <p id="status"></p>
+
+        </div>
+
+
+        <!-- Memories -->
+        <h2 class="gallery-title">
+            💕 Our Memories
+        </h2>
+        <p id="memoryCount">0 Memories ❤️</p>
+        <div id="memoryList" class="memory-list">
+        </div>
+
+    </div>
+
+
+    <script src="memories.js"></script>
+
+</body>
+
+</html>

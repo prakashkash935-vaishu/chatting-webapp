@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LOVEBOX Dashboard ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <div class="dashboard-page">
+
+
+        <div class="dashboard-box">
+
+
+            <!-- =========================
+                 LOVEBOX TITLE
+            ========================== -->
+
+            <h1>💌 LOVEBOX</h1>
+
+
+            <h2>
+
+                <span id="userName">
+                    My Princess Vaishu
+                </span>
+                👑❤️
+            </h2>
+
+
+            <p class="dashboard-text">
+                Your little world of love, memories and secrets 💕
+            </p>
+
+
+
+            <!-- =========================
+                 DASHBOARD CARDS
+            ========================== -->
+
+            <div class="dashboard-cards">
+
+
+                <!-- LOVE MAILS -->
+
+                <div class="dashboard-card" onclick="window.location.href='inbox.html'">
+
+                    <span>💌</span>
+
+                    <h3>Love Mails</h3>
+
+                    <p id="mailCount">0</p>
+
+                </div>
+
+
+
+                <!-- STARRED -->
+
+                <div class="dashboard-card" onclick="window.location.href='inbox.html#starred'">
+
+                    <span>⭐</span>
+
+                    <h3>Starred</h3>
+
+                    <p id="starCount">0</p>
+
+                </div>
+
+
+
+                <!-- MEMORIES -->
+
+                <div class="dashboard-card" onclick="window.location.href='memories.html'">
+
+                    <span>📸</span>
+
+                    <h3>Memories</h3>
+
+                    <p id="memoryCount">0</p>
+
+                </div>
+
+
+
+                <!-- SECRETS -->
+
+                <div class="dashboard-card" onclick="window.location.href='secrets.html'">
+
+                    <span>🎁</span>
+
+                    <h3>Secrets</h3>
+
+                    <p id="secretCount">0</p>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =========================
+                 OPEN LOVEBOX BUTTON
+            ========================== -->
+
+            <button class="dashboard-btn" onclick="window.location.href='inbox.html'">
+
+                📥 Open My LOVEBOX
+
+            </button>
+
+
+
+            <!-- =========================
+                 LOGOUT BUTTON
+            ========================== -->
+
+            <button class="dashboard-logout" onclick="logoutUser()">
+
+                🚪 Logout
+
+            </button>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- =========================
+         LOGIN CHECK + LOGOUT
+    ========================== -->
+
+    <script>
+
+        const user =
+            localStorage.getItem("loveboxUser");
+
+
+        if (!user) {
+
+            window.location.href =
+                "login.html";
+
+        }
+
+
+        function logoutUser() {
+
+            localStorage.removeItem(
+                "loveboxUser"
+            );
+
+            window.location.href =
+                "login.html";
+
+        }
+
+    </script>
+
+
+
+    <!-- =========================
+         DASHBOARD DYNAMIC COUNTS
+    ========================== -->
+
+    <script src="dashboard.js"></script>
+
+
+</body>
+
+</html>

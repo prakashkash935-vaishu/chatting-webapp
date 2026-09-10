@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LOVEBOX❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- =========================
+             SIDEBAR
+        ========================== -->
+
+        <aside class="sidebar">
+
+            <h1>💌 LOVEBOX</h1>
+
+            <!-- Compose -->
+
+            <button class="compose" onclick="window.location.href='compose.html'">
+
+                + Compose
+
+            </button>
+
+
+            <!-- Navigation -->
+
+            <nav>
+
+                <a href="inbox.html" class="active">
+                    📥 Inbox
+                </a>
+
+
+                <a href="#" onclick="showStarred(); return false;">
+
+                    ⭐ Starred
+
+                </a>
+
+
+                <!--my love-->
+                <a href="my-love.html">
+                    ❤️ My Love
+                </a>
+
+
+                <a href="memories.html">
+
+                    📸 Memories
+
+                </a>
+
+
+                <a href="secrets.html">
+
+                    🎁 Secrets
+
+                </a>
+
+            </nav>
+
+
+            <!-- Logout -->
+
+            <button class="logout-btn" onclick="logoutUser()">
+
+                🚪 Logout
+
+            </button>
+
+        </aside>
+
+
+
+        <!-- =========================
+             MAIN CONTENT
+        ========================== -->
+
+        <main class="main">
+
+            <header>
+                <button class="dashboard-back" onclick="window.location.href='dashboard.html'">
+                    🏠 Dashboard
+                </button>
+                <h2 id="pageTitle">
+                    Inbox ❤️
+                </h2>
+
+
+                <input type="text" id="search" placeholder="Search love mails..." onkeyup="searchMail()">
+
+            </header>
+
+
+
+            <!-- EMAIL LIST -->
+
+            <section id="emailList">
+
+                <p class="loading">
+                    Loading your love mails... ❤️
+                </p>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- APP JAVASCRIPT -->
+
+    <script src="app.js"></script>
+
+
+    <!-- LOGOUT FUNCTION -->
+
+    <script>
+
+        function logoutUser() {
+
+            localStorage.removeItem("loveboxUser");
+
+            window.location.href = "login.html";
+
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Compose Love Mail ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="compose-page">
+
+        <div class="compose-box">
+
+            <h2>💌 New Love Mail</h2>
+
+            <!-- RECEIVER -->
+            <label>To</label>
+
+            <select id="receiver">
+                <option value="">Select your Love ❤️</option>
+            </select>
+
+
+            <!-- SUBJECT -->
+            <label>Subject</label>
+
+            <input type="text" id="subject" placeholder="Write your subject ❤️">
+
+
+            <!-- MESSAGE -->
+            <label>Your Message</label>
+
+            <textarea id="message" rows="10" placeholder="Write something from your heart... ❤️"></textarea>
+
+
+            <!-- BUTTONS -->
+            <div class="buttons">
+
+                <button type="button" onclick="sendMail()">
+                    Send ❤️
+                </button>
+
+                <button type="button" class="cancel" onclick="window.location.href='inbox.html'">
+                    Cancel
+                </button>
+
+            </div>
+
+
+            <!-- STATUS -->
+            <p id="status"></p>
+
+        </div>
+
+    </div>
+
+
+    <script src="compose.js"></script>
+
+</body>
+
+</html>
