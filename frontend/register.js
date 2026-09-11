@@ -12,7 +12,7 @@ function registerUser() {
 
     status.innerText = "Registering...";
 
-    fetch("http://localhost:5000/api/register", {
+    fetch("https://lovebox-h27i.onrender.com/api/register", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
